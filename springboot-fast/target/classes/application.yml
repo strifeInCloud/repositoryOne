@@ -1,0 +1,24 @@
+server:
+  port: 9002
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/action?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
+    username: root
+    password:
+
+mybatis-plus:
+  typeAliasesPackage: com.springbootfast.module.*.pojo
+  global-config:
+    #��������  0:"���ݿ�ID����", 1:"�û�����ID",2:"ȫ��ΨһID (��������ΨһID)", 3:"ȫ��ΨһID UUID";
+    id-type: 3
+    #�ֶβ��� 0:"�����ж�",1:"�� NULL �ж�"),2:"�ǿ��ж�"
+    field-strategy: 2
+    #�շ��»���ת��
+    db-column-underline: true
+    #ˢ��mapper ��������
+    refresh-mapper: true
+    #���ݿ��д�»���ת��
+    capital-mode: true
+  configuration:
+    cache-enabled: false
